@@ -1,4 +1,8 @@
 import { Component } from "@angular/core";
 
-@Component({ templateUrl: 'account_created.component.html' })
+@Component({ 
+    selector: 'account_created-root',
+    templateUrl: 'account_created.component.html',
+    styleUrls: [ './account_created.component.css' ]
+})
 export class AccountCreatedComponent {}
