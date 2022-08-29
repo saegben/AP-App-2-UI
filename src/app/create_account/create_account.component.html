@@ -1,1 +1,142 @@
-<h1>Create Account Page</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <!-- Title -->
+    <div class="title">
+        <p>Create Account</p>
+    </div>
+    <!-- Title -->
+
+    <!--Return button-->
+    <button type="button" class="return" routerLink="/home">Return</button>
+    <!--Return button-->
+  
+    <!-- Body of Form starts -->
+  	<div class="container">
+        <form method="post" autocomplete="on">
+            
+            <!--First name-->
+            <div class="box">
+            <label for="firstName" class="leftSide fontLabel">First Name</label>
+                <div class="rightSide">
+                    <input type="text" name="firstName" placeholder="First Name" class="textBox" autofocus="on" required>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--First name-->
+
+            <!--Second name-->
+            <div class="box">
+                <label for="lastName" class="leftSide fontLabel">Last Name</label>
+                    
+                <div class="rightSide">
+                    <input type="text" required name="lastName" placeholder="Last Name" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--Second name-->
+            
+            <!---Phone No.------>
+            <div class="box">
+                <label for="phone" class="leftSide fontLabel">Phone Number</label>
+                    
+                <div class="rightSide">
+                    <input type="text" required name="phoneNo" maxlength="10" placeholder="Phone Number" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!---Phone No.---->
+
+            <!---Email Address---->
+            <div class="box">
+            <label for="email" class="leftSide fontLabel">Email Address</label>
+                    
+                <div class="rightSide">
+                    <input type="email" required name="email" placeholder="Email Address" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--Email ID----->
+
+            <!--High School---->
+            <div class="box">
+                <label for="highSchool" class="leftSide fontLabel">High School</label>
+                    
+                <div class="rightSide">
+                    <input type="text" required name="highSchol" placeholder="High School" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--High School---->
+
+            <!--Birthday---->
+            <div class="box">
+                <label for="birthday" class="leftSide fontLabel">Birthday</label>
+                    
+                <div class="rightSide">
+                    <!--the birthday text box is just a regular textbox btw---->
+                    <input type="date" required name="birthday" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--Birthday---->
+            
+            <!--Address---->
+            <div class="box">
+                <label for="address" class="leftSide fontLabel">Address</label>
+                    
+                <div class="rightSide">
+                    <!--we can sitll add more input box for the address---->
+                    <input type="text" required name="address" placeholder="Address" class="textBox">
+                    <br>
+                    <input type="text" required name="address2" placeholder="Address Line 2" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--Address---->
+
+            <br>
+            
+            <!---Password------>
+            <div class="box">
+                <label for="password" class="leftSide fontLabel">Password</label>
+                    
+                <div class="rightSide">
+                    <input type="Password" required name="password" placeholder="Password" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!---Password---->
+            
+            <!---Confirm Password------>
+            <div class="box">
+                <label for="confirmPassword" class="leftSide fontLabel">Confirm Password</label>
+                    
+                <div class="rightSide">
+                    <input type="Password" required name="confirmPassword" placeholder="Confirm Password" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!---Confirm Password---->
+
+            <!---Submit Button------>
+            <div class="box">
+                <input type="Submit" name="Submit" class="submit" value="Submit" routerLink="/account-created">
+            </div>
+            <!---Submit Button----->
+
+            <br>
+        
+        </form>
+    </div>
+    <!--Body of Form ends--->
+
+</body>
+
+</html>

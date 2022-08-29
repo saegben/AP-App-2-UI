@@ -1,3 +1,119 @@
-h1 {
-    color:rgb(51, 255, 0);
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* Title */
+.title {
+    color: #230007;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+/* Return Button */
+.return {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -170px;
+
+    background-color: #D62828;
+    color: #ffffff;
+  
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    font-family: monospace;
+    
+    width: 120px;
+    height: 35px;
+}
+.return:hover {
+    opacity: 0.6;
+}
+  
+/* Form Container */
+.container {
+    background: #EAE2B7;
+    padding-bottom: 20px;
+    position: absolute;
+
+    padding: 50px 50px 20px 40px;
+    top: 480px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 40px;
+  
+    width: 370px;
+    height: 600px;
+}
+
+/* Input Section */
+.box {
+    width: 370px;
+    height: 35px;
+    margin-top: 10px;
+}
+  
+/* Left-Side Content*/
+.leftSide {
+    float: left;
+    width: 140px;
+    line-height: 35px;
+}
+  
+/* Input Labels */
+.fontLabel {
+    color: #ffffff;
+}
+  
+/* Right-Side Content */
+.rightSide {
+    float: right;
+}
+  
+.clr {
+    clear: both;
+}
+  
+/* Input Boxes */
+.textBox {
+    height: 35px;
+    width: 190px;
+    padding-left: 20px;
+    border: none;
+    background-color: #dfd59d;
+}
+input[type="date"] {
+    color: #bbb179;
+}
+
+input:focus {
+    outline: none;
+}
+input::placeholder {
+    color: #bbb179;
+}
+  
+/* Submit Button */
+.submit {
+    border: none;
+    color: #ffffff;
+    background: #61d0ff;
+    font-family: monospace;
+
+    margin-top: 50px;
+
+    cursor: pointer;
+    font-size: 16px;
+    width: 370px;
+    height: 50px;
+    border-radius: 6px;
+}
+.submit:hover{
+    opacity: 0.6;
 }
