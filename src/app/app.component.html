@@ -1,19 +1,33 @@
-<!-- navigation -->
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-  <div class="navbar-nav">
-    <a class="nav-item nav-link" routerLink="/">Home</a>
-    <a class="nav-item nav-link" routerLink="/create-account">Create Account</a>
-    <a class="nav-item nav-link" routerLink="/account-created">Account Successfully Created</a>
-  </div>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
 
-<!-- main content container -->
-<div class="main-content">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 offset-sm-2">
+        <p class="title">ACCESS POINT</p>
+
+        <div class="nav-bar">
+          <button type="button" class="home-button" routerLink="/home">Home</button>
+          <button type="button" class="fake-button">☰</button>
+          <button type="button" class="fake-button">☰</button>
+          <button type="button" class="fake-button">☰</button>
+          <button type="button" class="fake-button">☰</button>
+          <button type="button" class="fake-button">☰</button>
+        </div>
+
+      </div>
+      <!-- Content -->
+      <div class="content">
         <router-outlet></router-outlet>
       </div>
+      <!-- Footer -->
+      <div class="footer">
+        <p>By Team Mastercard</p>
+      </div>
     </div>
-  </div>
-</div>
+  </body>
+</html>

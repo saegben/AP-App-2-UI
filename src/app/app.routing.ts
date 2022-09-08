@@ -1,5 +1,4 @@
 import { Routes, RouterModule } from '@angular/router';
-
 import { HomeComponent } from './home';
 import { CreateAccountComponent } from './create_account';
 import { AccountCreatedComponent } from './account_created';
@@ -11,6 +10,5 @@ const routes: Routes = [
 
     { path: '**', redirectTo: '' }
 ];
-
 
 export const appRoutingModule = RouterModule.forRoot(routes);

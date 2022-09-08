@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+p {
+    margin: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, sans-serif;
+    color: #230007;
+}
+
+.header {
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #f8f5e5;
+    font-family: monospace;
+    max-height: fit-content;
+    padding: 16px 10px 16px 18px;
+    vertical-align: middle;
+   
+}
+.title {
+    color: #230007;
+    font-size: 44px;
+    font-weight: 700;
+    font-family: "Poppins";
+    transform: scale(1, 1.4);
+}
+.nav-bar {
+    display: inline-block;
+    margin-top: 18px;
+}
+.home-button, .fake-button {
+    color: #230007;
+    background: #f8f5e5;
+    font-family: monospace;
+    font-size: 16px;
+    border-color: #dfd6a8;
+    border-style: solid;
+    width: 100px;
+    height: 30px;
+    float: left;
+    cursor: pointer;
+}
+button:hover {
+    border-color: #D62828;
+    background: #D62828;
+    color: #EAE2B7;
+}
+.fake-button {
+    margin-left: -2px;
+}
+
+.content {
+    flex-shrink: 1;
+    flex-grow: 1;
+    position: relative;
+    min-height: 750px;
+    max-height: fit-content;
+    background: #ffffff;
+}
+
+.footer {
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #ffffff;
+    font-family: monospace;
+    border-top: 2px solid #f8f5e5;
+    min-height: 50px;
+    font-size: 13px;
+    color: #D62828;
+    padding: 16px 10px 16px 18px;
+}

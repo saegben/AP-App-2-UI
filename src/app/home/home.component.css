@@ -1,3 +1,31 @@
-h1 {
-    color:blue;
+.welcome {
+    color: #D62828;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    transform: scale(1, 1.1);
+    letter-spacing: 2px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.CSA-button {
+    border-color: #230007;
+    border-style: solid;
+    background: #ffffff;
+    color: #230007;
+    font-family: monospace;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+.CSA-button:hover {
+    border-color: #FCBF49;
+    background: #FCBF49;
+    color: #ffffff;
 }

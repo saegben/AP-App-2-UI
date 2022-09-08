@@ -1,3 +1,35 @@
-h1 {
-    color:rgb(255, 136, 0);
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    transform: scale(1, 1.1);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.username-container {
+    font-size: 16px;
+    font-family: monospace;
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.return {
+    border-color: #230007;
+    border-style: solid;
+    background: #ffffff;
+    color: #230007;
+    font-family: monospace;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+}
+.return:hover {
+    border-color: #F77F00;
+    background: #F77F00;
+    color: #ffffff;
 }

@@ -1,94 +1,81 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    font-family: Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-/* Title */
 .title {
-    color: #230007;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: monospace;
+    font-size: 40px;
+    font-weight: 800;
+    transform: scale(1, 1.1);
+    letter-spacing: 2px;
+    text-align: center;
 }
 
-/* Return Button */
-.return {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-left: -170px;
+.button-container {
+    text-align: center;
+    margin-top: -20px;
+    margin-left: -445px;
+}
 
-    background-color: #D62828;
-    color: #ffffff;
-  
-    border: none;
-    cursor: pointer;
+.return {
+    border-color: #230007;
+    border-style: solid;
+    background: #ffffff;
+    color: #230007;
+    font-family: monospace;
     font-size: 16px;
     border-radius: 6px;
-    font-family: monospace;
-    
+    cursor: pointer;
     width: 120px;
     height: 35px;
 }
 .return:hover {
-    opacity: 0.6;
+    border-color: #D62828;
+    background: #D62828;
+    color: #ffffff;
 }
-  
-/* Form Container */
-.container {
-    background: #EAE2B7;
-    padding-bottom: 20px;
-    position: absolute;
 
-    padding: 50px 50px 20px 40px;
-    top: 480px;
+.form-container {
+    background: #EAE2B7;
+    top: 450px;
     left: 50%;
     transform: translate(-50%, -50%);
+    position: absolute;
+    padding: 40px 40px 40px 40px;
     line-height: 40px;
-  
     width: 370px;
-    height: 600px;
+    height: fit-content;
 }
 
-/* Input Section */
 .box {
     width: 370px;
     height: 35px;
     margin-top: 10px;
 }
-  
-/* Left-Side Content*/
+
 .leftSide {
     float: left;
     width: 140px;
     line-height: 35px;
 }
-  
-/* Input Labels */
+
 .fontLabel {
-    color: #ffffff;
+    color: #bbb179;
+    margin-top: 2px;
 }
-  
-/* Right-Side Content */
+
 .rightSide {
     float: right;
 }
-  
+
 .clr {
     clear: both;
 }
   
-/* Input Boxes */
-.textBox {
+.inputBox {
     height: 35px;
     width: 190px;
     padding-left: 20px;
     border: none;
     background-color: #dfd59d;
 }
-input[type="date"] {
+
+input[type="date"]:not(:valid)::-webkit-datetime-edit {
     color: #bbb179;
 }
 
@@ -99,21 +86,21 @@ input::placeholder {
     color: #bbb179;
 }
   
-/* Submit Button */
 .submit {
-    border: none;
-    color: #ffffff;
-    background: #61d0ff;
+    border-color: #230007;
+    border-style: solid;
+    background: #EAE2B7;
+    color: #230007;
     font-family: monospace;
-
-    margin-top: 50px;
-
-    cursor: pointer;
     font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 35px;
     width: 370px;
     height: 50px;
-    border-radius: 6px;
 }
-.submit:hover{
-    opacity: 0.6;
+.submit:hover {
+    border-color: #61d0ff;
+    background: #61d0ff;
+    color: #EAE2B7;
 }
