@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Access Point';
+
+  constructor(private userService: UserService) {
+    let hello$ = userService.observe();
+
+    hello$.subscribe(
+      (data: any) => console.log(data),
+      err => console.error(err)
+    );
+  }
+
 }

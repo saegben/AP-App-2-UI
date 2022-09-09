@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
 import { CreateAccountComponent } from './create_account';
 import { AccountCreatedComponent } from './account_created';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     appRoutingModule
