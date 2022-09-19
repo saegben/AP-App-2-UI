@@ -1,0 +1,157 @@
+<body>
+    
+    <h1>Create Student Account</h1>
+
+    <div class="container">
+        <div [hidden]="submitted">
+            <form (ngSubmit)="onSubmit()" #studentForm="ngForm"  autocomplete="off">
+
+                <div class="form-group">
+                    <label for="first-name" class="input-label">First Name</label><br >
+                    <input type="text" class="form-control" id="firstName" placeholder="First name"
+                        required
+                        [(ngModel)]="model.firstName" name="firstName" #firstname="ngModel"
+                    >
+                    <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)" class="error-notif">
+                        <div *ngIf="firstname.hasError('required')">Field is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name" class="input-label">Last Name</label><br >
+                    <input type="text" class="form-control" id="lastName" placeholder="Last name"
+                        required
+                        [(ngModel)]="model.lastName" name="lastName" #lastname="ngModel"
+                    >
+                    <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="error-notif">
+                        <div *ngIf="lastname.hasError('required')">Field is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone-number" class="input-label">Phone Number</label><br >
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Phone number"
+                        required pattern="[(]?[0-9]{3}[)]?[-\.]?[0-9]{3}[-\.]?[0-9]{4}"
+                        [(ngModel)]="model.phoneNumber" name="phoneNumber" #phonenumber="ngModel"
+                    >
+                    <div *ngIf="phonenumber.invalid && (phonenumber.dirty || phonenumber.touched)" class="error-notif">
+                        <div *ngIf="phonenumber.hasError('required')">Field is required.</div>
+                        <div *ngIf="phonenumber.hasError('pattern')">Invalid format.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email-address" class="input-label">Email Address</label><br >
+                    <input type="email" class="form-control" id="emailAddress" placeholder="Email address"
+                        required email
+                        [(ngModel)]="model.emailAddress" name="emailAddress" #emailaddress="ngModel"
+                    >
+                    <div *ngIf="emailaddress.invalid && (emailaddress.dirty || emailaddress.touched)" class="error-notif">
+                        <div *ngIf="emailaddress.hasError('required')">Field is required.</div>
+                        <div *ngIf="emailaddress.hasError('email')">Invalid format.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="high-school" class="input-label">High School</label><br >
+                    <input type="text" class="form-control" id="highSchool" placeholder="High school"
+                        required
+                        [(ngModel)]="model.highSchool" name="highSchool" #highschool="ngModel"
+                    >
+                    <div *ngIf="highschool.invalid && (highschool.dirty || highschool.touched)" class="error-notif">
+                        <div *ngIf="highschool.hasError('required')">Field is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="birth-day" class="input-label">Date of Birth</label><br >
+                    <input type="date" class="form-control" id="birthDay"
+                        required
+                        [(ngModel)]="model.birthDay" name="birthDay" #birthday="ngModel"
+                    >
+                    <div *ngIf="birthday.invalid && (birthday.dirty || birthday.touched)" class="error-notif">
+                        <div *ngIf="birthday.hasError('required')">Field is required.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address-line-one" class="input-label">Home Address</label><br >
+                    <input type="text" class="form-control" id="addressLineOne" placeholder="Address"
+                        required
+                        [(ngModel)]="model.addressLineOne" name="addressLineOne" #addresslineone="ngModel"
+                    >
+                    <div *ngIf="addresslineone.invalid && (addresslineone.dirty || addresslineone.touched)" class="error-notif">
+                        <div *ngIf="addresslineone.hasError('required')">Field is required.</div>
+                    </div>
+                    <!-- Address Line Two -->
+                    <input type="text" class="form-control" id="addressLineTwo" placeholder="Address line two"
+                        [(ngModel)]="model.addressLineTwo" name="addressLineTwo" #addresslinetwo="ngModel"
+                    >
+                    <div *ngIf="addresslinetwo.invalid && (addresslinetwo.dirty || addresslinetwo.touched)" class="error-notif">
+                        <!-- no current potential errors -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="input-label">Password</label><br >
+                    <input type="password" class="form-control" id="password" placeholder="Password"
+                        required minlength="8"
+                        [(ngModel)]="model.password" name="password" #password="ngModel"
+                    >
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-notif">
+                        <div *ngIf="password.hasError('required')">Field is required.</div>
+                        <div *ngIf="password.hasError('minlength')">Password must be at least 8 characters.</div>
+                    </div>
+                    <!-- Confirm Password  -->
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password"
+                        required ngValidateEqual="password"
+                        [(ngModel)]="model.confirmPassword" name="confirmPassword" #confirmpassword="ngModel"
+                    >
+                    <div *ngIf="confirmpassword.invalid && (confirmpassword.dirty || confirmpassword.touched)" class="error-notif">
+                        <div *ngIf="confirmpassword.hasError('required')">Field is required.</div>
+                        <div *ngIf="confirmpassword.hasError('notEqual') && password.valid">Password does not match.</div>
+                    </div>
+                </div>
+    
+                <button type="button" class="cancel-button" (click)="confirmReturn()" routerLink="/home">Cancel</button>
+    
+                <button type="submit" class="submit-button" [disabled]="!studentForm.form.valid" (click)="createUsername(firstname.value, lastname.value, birthday.value)">Submit</button>
+
+                <!-- View value and status --> <!-- !! CAN BE DELETED !!
+                <div class="row">
+                    <p>First Name: [{{model.firstName}}] Status: {{firstname.status}}</p>
+                </div>
+                <div class="row">
+                    <p>Last Name: [{{model.lastName}}] Status: {{lastname.status}}</p>
+                </div>
+                <div class="row">
+                    <p>Phone Number: [{{model.phoneNumber}}] Status: {{phonenumber.status}}</p>
+                </div>
+                <div class="row">
+                    <p>Email Address: [{{model.emailAddress}}] Status: {{emailaddress.status}}</p>
+                </div>
+                <div class="row">
+                    <p>High School: [{{model.highSchool}}] Status: {{highschool.status}}</p>
+                </div>
+                <div class="row">
+                    <p>Birthday: [{{model.birthDay}}] Status: {{birthday.status}}</p>
+                </div>
+                <div class="row">
+                    <p>Address Line One: [{{model.addressLineOne}}] Status: {{addresslineone.status}}</p>
+                </div>
+                <div class="row">
+                    <p>Address Line Two: [{{model.addressLineTwo}}] Status: {{addresslinetwo.status}}</p>
+                </div>
+                <div class="row">
+                    <p>Password: [{{model.password}}] Status: {{password.status}}</p>
+                </div>
+                <div class="row">
+                    <p>Confirm Password: [{{model.confirmPassword}}] Status: {{confirmpassword.status}}</p>
+                </div>
+                -->
+    
+            </form>
+        </div>
+    </div>
+
+</body>

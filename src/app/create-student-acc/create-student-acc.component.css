@@ -1,0 +1,95 @@
+h1 {
+    font-size: 40px;
+    font-weight: 800px;
+    transform: scale(1, 1.1);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.container {
+    border-radius: 10px;
+    background: #EAE2B7;
+    text-align: center;
+    font-size: 18px;
+    padding: 45px 60px 60px 60px;
+    margin: 10px 180px;
+}
+
+.form-group {
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.error-notif {
+    border: 1px solid #D62828;
+    border-radius: 10px;
+    color: #D62828;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.input-label {
+    color: #bbb179;
+}
+
+input {
+    background: #f8f5e5;
+    border: 1px solid #dfd59d;
+    font-size: 18px;
+    height: 45px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+input::placeholder {
+    color: #dfd59d;
+}
+input:focus {
+    outline: none;
+}
+
+input[type="date"]:not(:valid)::-webkit-datetime-edit {
+    color: #dfd59d;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    margin-right: 20px;
+}
+
+.cancel-button {
+    border-color: #230007;
+    border-style: solid;
+    border-radius: 6px;
+    background: #EAE2B7;
+    color: #230007;
+    font-family: monospace;
+    font-size: 16px;
+    cursor: pointer;
+    height: 35px;
+    width: 100px;
+}
+.cancel-button:hover {
+    border-color: #D62828;
+    background: #D62828;
+    color: #EAE2B7;
+}
+
+.submit-button {
+    border-color: #230007;
+    border-style: solid;
+    border-radius: 6px;
+    background: #EAE2B7;
+    color: #230007;
+    font-family: monospace;
+    font-size: 16px;
+    cursor: pointer;
+    height: 35px;
+    width: 200px;
+    margin-left: 10px;
+}
+.submit-button:enabled:hover {
+    border-color: #61d0ff;
+    background: #61d0ff;
+    color: #EAE2B7;
+}

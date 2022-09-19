@@ -8,13 +8,15 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
 
+  
   constructor(private userService: UserService) {
     let hello$ = userService.observe();
 
+    // Subscribe app component to API
     hello$.subscribe(
       (data: any) => console.log(data),
       err => console.error(err)
     );
   }
-
+  
 }
